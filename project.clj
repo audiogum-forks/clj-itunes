@@ -1,6 +1,6 @@
-(defproject audiogum/clj-itunes "0.1.2-SNAPSHOT"
+(defproject audiogum/clj-itunes "0.1.2"
   :description "A Clojure client for the iTunes search API"
-  :url "http://github.com/cosmin/clj-itunes"
+  :url "http://github.com/audiogum-forks/clj-itunes"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.9.0"]
