@@ -74,11 +74,16 @@
 
   See the full docs at http://bit.ly/bGaJt4"
   ([term] (search term {}))
-  ([term params]
+  ([term params] (search term params {}))
+  ([term params http-options]
    (let [params     (assoc params :term term)
          search-url (str *api-base-url* "/search")]
-     (http/get search-url {:as          :json
-                           :query-params (stringify-params (normalize-explicit params))}))))
+     (http/get
+      search-url
+      (merge
+       http-options
+       {:as           :json
+        :query-params (stringify-params (normalize-explicit params))})))))
 
 (defn lookup
   "Lookup an item in the iTunes store by iTunes IDs, UPC/EAN, and AMG IDs
@@ -95,7 +100,12 @@
 
   See the full examples at http://bit.ly/KrqhwH"
   ([key value] (lookup key value {}))
-  ([key value params]
+  ([key value params] (lookup key value params {}))
+  ([key value params http-options]
    (let [lookup-url (str *api-base-url* "/lookup")]
-     (http/get lookup-url {:as           :json
-                           :query-params (stringify-params (assoc params key value))}))))
+     (http/get
+      lookup-url
+      (merge
+       http-options
+       {:as           :json
+        :query-params (stringify-params (assoc params key value))})))))
