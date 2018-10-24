@@ -4,21 +4,21 @@ A Clojure library for querying the iTunes search and lookup APIs (affiliate)
 
 ## Releases and Dependency Information
 
-Latest stable release is `0.1.0`
+Latest stable release is `0.1.2`
 
 For leiningen
 
 ```clojure
-[com.offbytwo/clj-itunes "0.1.0"]
+[audiogum/clj-itunes "0.1.2"]
 ```
 
 For Maven
 
 ```xml
 <dependency>
-  <groupId>com.offbytwo</groupId>
+  <groupId>audiogum</groupId>
   <artifactId>clj-itunes</groupId>
-  <version>0.1.0</version>
+  <version>0.1.2</version>
 </dependency>
 ```
 
